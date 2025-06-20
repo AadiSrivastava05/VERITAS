@@ -1,6 +1,7 @@
 # VERITAS: Verification and Explanation of Realness in Images for Transparency in AI Systems
 
 ## Abstract
+
 The widespread adoption of AI-generated content has revolutionized the digital media landscape, enabling efficient and creative content generation while simultaneously raising concerns regarding content authenticity and integrity. While many existing solutions focus solely on classification, they often lack transparency in their decision-making. In this paper, we present VERITAS, a comprehensive framework that not only accurately detects whether an image is AI-generated but also explains why it was classified that way through artifact localization and semantic reasoning. Our architecture couples traditional image classifiers with a novel interpretability pipeline that employs GradCAM, patch-wise weighting, CLIP-based scoring, and a multimodal language model (MOLMO) to produce human-readable explanations of detected artifacts. We show that this architecture is robust to adversarial attacks and propose ablation studies across various vision-language models (VLMs), culminating in our selection of MOLMO for its semantic coherence and precision.
 
 ## Features
