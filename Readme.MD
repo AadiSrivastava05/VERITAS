@@ -21,7 +21,7 @@ basis of zero-shot synthetic image detection tasks.
 
 ## Repository Structure
 - Code relevant to the architecture proposed in the paper can be found at [VERITAS](VERITAS_pipeline_notebooks)
-- Miscellaneous Experiments contains code for a variety of classification architectures reviewed in the paper. The materials in this repository are provided "as is" without any guarantees of accuracy or correctness.
+- Classification_experiments and classification+VERITAS contains code for a variety of classification architectures reviewed in the paper. The materials in this repository are provided "as is" without any guarantees of accuracy or correctness.
 - Pipeline Structure contains images to describe the pipelines discussed in the paper
 
 
