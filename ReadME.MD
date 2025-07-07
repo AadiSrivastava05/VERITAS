@@ -1,43 +1,51 @@
 # VERITAS: Verification and Explanation of Realness in Images for Transparency in AI Systems
+The official repository for the paper "VERITAS: Verification and Explanation of Realness in Images for Transparency in AI Systems" by Srivastava et al.
+ArXiv link: 
 
 ## Abstract
-The widespread adoption of AI-generated content has revolutionized the digital media landscape, enabling efficient and creative content generation while simultaneously raising concerns regarding content authenticity and integrity. While many existing solutions focus solely on classification, they often lack transparency in their decision-making. In this paper, we present VERITAS, a comprehensive framework that not only accurately detects whether an image is AI-generated but also explains why it was classified that way through artifact localization and semantic reasoning. Our architecture couples traditional image classifiers with a novel interpretability pipeline that employs GradCAM, patch-wise weighting, CLIP-based scoring, and a multimodal language model (MOLMO) to produce human-readable explanations of detected artifacts. We show that this architecture is robust to adversarial attacks and propose ablation studies across various vision-language models (VLMs), culminating in our selection of MOLMO for its semantic coherence and precision.
+The widespread and rapid adoption of AI-generated content, created by models such as Generative Adversarial Networks (GANs) and Diffusion Models, has revolutionized the digital media landscape by allowing efficient and creative content generation. However, these models also blur the difference between real images and AI-generated synthetic, or “fake”, images, raising concerns regarding content authenticity and integrity. While many existing solutions to detect fake images focus solely on classification and higher-resolution images, they often lack transparency in their decision-making, making it difficult for users to understand why an image is classified as fake. In this paper, we present VERITAS, a comprehensive framework that not only accurately detects whether a small
+(32x32) image is AI-generated but also explains why it was classified that way through artifact localization and semantic reasoning. VERITAS produces human-readable explanations that describe key artifacts in synthetic images. We show that this architecture offers clear explanations of the
+basis of zero-shot synthetic image detection tasks. 
 
 ## Features
 - **Artifact Detection and Explainability**: Utilizes advanced interpretability techniques to highlight and analyze distinguishing features.
 - **Super-Resolution for Detailed Analysis**: Applies super-resolution techniques to improve artifact detection in case of low-resolution images.
+- **Small Image Analysis**: Studies realness and explanation of artifacts in artifact-constrained images of size 32x32 as seen in CIFAR-10 and CIFAKE. 
 
 ## Methodology
-### 1. Classification Experiments Framework
-- Utilizes an ensemble of EfficientNet, ResNet-18, and ViT-Tiny for robust classification.
-- Trained on an augmented CIFAKE dataset, incorporating adversarially modified images.
-- Implements a weighted ensemble approach to optimize predictive performance.
+-  Super-resolve input image using DRCT
+-  Localize relevant regions with GradCAM heatmaps
+-  Divide image into patches weighted by attention
+-  Use CLIP-based similarity for artifact classification
+-  Generate textual explanations via MOLMO
 
-### 2. Artifact Detection Mechanism
-- Enhances image resolution using DRCT (Diffusion Reconstruction Contrastive Training) Super-Resolution models.
-- Applies GradCAM-based heatmaps to visualize decision-critical regions.
-- Utilizes CLIP-based scoring to quantify and rank unnatural features.
-- Leverages MOLMO to generate textual descriptions of detected artifacts, improving interpretability.
+## Repository Structure
+- Code relevant to the architecture proposed in the paper can be found at [VERITAS](VERITAS_pipeline_notebooks)
+- Miscellaneous Experiments contains code for a variety of classification architectures reviewed in the paper. The materials in this repository are provided "as is" without any guarantees of accuracy or correctness.
+- Pipeline Structure contains images to describe the pipelines discussed in the paper
 
-## Pipelines
-### 1. Classification Framework Pipeline
-![Task 1 pipeline](pipeline_structures/Task_1_pipeline_structure.png?raw=true "Task 1 Pipeline")
-### 2. VERITAS pipeline
-![Task 2 pipeline](pipeline_structures/Task_2_pipeline_structure.png?raw=true "Task 2 Pipeline")
 
-## Dataset Composition for the Classification Experiments
-The dataset builds upon the CIFAKE dataset, integrating adversarial perturbations from:
-- **Fast Gradient Sign Method (FGSM)**: Introduces minimal perturbations to deceive classifiers.
-- **Projected Gradient Descent (PGD)**: Iteratively refines perturbations for enhanced evasion.
-- **AutoAttack**: Employs an ensemble of adversarial attack strategies.
-- **AuraSR**: Includes images generated via GAN-based techniques to improve dataset diversity.
+## License
+VERITAS: Verification and Explanation of Realness in Images for Transparency in AI Systems © 2025 by Aadi Srivastava, Vignesh Natarajkumar, Utkarsh Bheemanaboyna, Devisree Akashapu, Nagraj Gaonkar, and Archit Joshi is licensed under CC BY-SA 4.0. 
 
-## Model Performance
-| Model               | Accuracy (%) |
-|---------------------|-------------|
-| EfficientNet        | 87.7        |
-| ResNet-18          | 83.5        |
-| ViT-Tiny           | 83.1        |
-| **Ensemble Model** | **93.1**    |
+To view a copy of this license, visit [https://creativecommons.org/licenses/by-sa/4.0/](https://creativecommons.org/licenses/by-sa/4.0/).
+
+## Citation
+If you found this useful, please cite the paper as follows
+
+```bibtex
+@article{srivastava2025veritas,
+  title={VERITAS: Verification and Explanation of Realness in Images for Transparency in AI Systems},
+  author={Srivastava, Aadi and Natarajkumar, Vignesh and Bheemanaboyna, Utkarsh and Akashapu, Devisree and Gaonkar, Nagraj and Joshi, Archit},
+  journal={arXiv preprint arXiv:2507.xxxxx},
+  year={2025}
+}
+```
+
+## Contact
+Incase of any questions, please contact Aadi Srivastava (aadisrivastava.iitm@gmail.com) or Vignesh Natarajkumar (vigneshn@smail.iitm.ac.in)
+
+
+
 
 
