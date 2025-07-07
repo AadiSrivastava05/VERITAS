@@ -1,5 +1,5 @@
 # VERITAS: Verification and Explanation of Realness in Images for Transparency in AI Systems
-The official repository for the paper "VERITAS: Verification and Explanation of Realness in Images for Transparency in AI Systems" by Srivastava et al.
+The official repository for the paper "VERITAS: Verification and Explanation of Realness in Images for Transparency in AI Systems" by Srivastava et al.   
 ArXiv link: 
 
 ## Abstract
