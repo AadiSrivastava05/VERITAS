@@ -1,6 +1,6 @@
 # VERITAS: Verification and Explanation of Realness in Images for Transparency in AI Systems
 The official repository for the paper "VERITAS: Verification and Explanation of Realness in Images for Transparency in AI Systems" by Srivastava et al.   
-ArXiv link: 
+ArXiv link: https://arxiv.org/abs/2507.05146
 
 ## Abstract
 The widespread and rapid adoption of AI-generated content, created by models such as Generative Adversarial Networks (GANs) and Diffusion Models, has revolutionized the digital media landscape by allowing efficient and creative content generation. However, these models also blur the difference between real images and AI-generated synthetic, or “fake”, images, raising concerns regarding content authenticity and integrity. While many existing solutions to detect fake images focus solely on classification and higher-resolution images, they often lack transparency in their decision-making, making it difficult for users to understand why an image is classified as fake. In this paper, we present VERITAS, a comprehensive framework that not only accurately detects whether a small
