@@ -34,11 +34,14 @@ To view a copy of this license, visit [https://creativecommons.org/licenses/by-s
 If you found this useful, please cite the paper as follows
 
 ```bibtex
-@article{srivastava2025veritas,
-  title={VERITAS: Verification and Explanation of Realness in Images for Transparency in AI Systems},
-  author={Srivastava, Aadi and Natarajkumar, Vignesh and Bheemanaboyna, Utkarsh and Akashapu, Devisree and Gaonkar, Nagraj and Joshi, Archit},
-  journal={arXiv preprint arXiv:2507.05146},
-  year={2025}
+@misc{srivastava2025veritasverificationexplanationrealness,
+      title={VERITAS: Verification and Explanation of Realness in Images for Transparency in AI Systems}, 
+      author={Aadi Srivastava and Vignesh Natarajkumar and Utkarsh Bheemanaboyna and Devisree Akashapu and Nagraj Gaonkar and Archit Joshi},
+      year={2025},
+      eprint={2507.05146},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2507.05146}, 
 }
 ```
 
