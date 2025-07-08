@@ -37,7 +37,7 @@ If you found this useful, please cite the paper as follows
 @article{srivastava2025veritas,
   title={VERITAS: Verification and Explanation of Realness in Images for Transparency in AI Systems},
   author={Srivastava, Aadi and Natarajkumar, Vignesh and Bheemanaboyna, Utkarsh and Akashapu, Devisree and Gaonkar, Nagraj and Joshi, Archit},
-  journal={arXiv preprint arXiv:2507.xxxxx},
+  journal={arXiv preprint arXiv:2507.05146},
   year={2025}
 }
 ```
